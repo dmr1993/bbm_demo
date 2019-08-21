@@ -1,0 +1,23 @@
+*** Creating Trace Output File '..\Out\Bin\LKT5103A_AppDemo.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"..\out\bin\app_main.o"'
+### List of Objects: adding '"..\out\bin\start.o"'
+### List of Objects: adding '"..\out\bin\app_fun.o"'
+### List of Objects: adding '"..\Lib\LKAPI_5103A.lib"'
+### ADS-LD Command completed:
+--cpu Cortex-M0 "..\out\bin\app_main.o" "..\out\bin\start.o" "..\out\bin\app_fun.o" E:\keil\lkt\LKT5103AËã·¨Àý³Ì\LKT5103A_Appdemo\Lib\LKAPI_5103A.lib 
+--strict --scatter ".\ARM_APP.sc" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list "..\Out\Lst\LKT5103A_AppDemo.map" -o ..\Out\Bin\LKT5103A_AppDemo.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '..\Out\Bin\LKT5103A_AppDemo.axf'
+### ADS-LD Command File: '..\Out\Bin\LKT5103A_AppDemo.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '..\Out\Bin\LKT5103A_AppDemo.lnp', Handle=0x000005E8
+### Writing '.lnp' file
+### ADS-LD Command file '..\Out\Bin\LKT5103A_AppDemo.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

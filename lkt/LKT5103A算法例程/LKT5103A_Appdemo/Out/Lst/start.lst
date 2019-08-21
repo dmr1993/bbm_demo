@@ -1,0 +1,82 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;=============ÇëÎðÐÞ¸Ä==================================
+                       ===
+    2 00000000                 AREA             RESET, DATA, READONLY
+    3 00000000                 AREA             |.text|, CODE, READONLY
+    4 00000000         
+    5 00000000         Reset_Handler
+                               PROC
+    6 00000000                 EXPORT           Reset_Handler             [WEAK
+]
+    7 00000000                 IMPORT           __main
+    8 00000000         
+    9 00000000 4800            LDR              R0, =__main
+   10 00000002 4700            BX               R0
+   11 00000004                 ENDP
+   12 00000004         
+   13 00000004         
+   14 00000004                 END
+              00000000 
+Command Line: --16 --debug --xref --cpu=Cortex-M0 --apcs=interwork --depend=..\
+Out\Bin\start.d -o..\Out\Bin\start.o -I..\..\SRC\HAL\ARM_FLASH\REG -Id:\Keil\AR
+M\RV31\INC -Id:\Keil\ARM\CMSIS\Include -Id:\Keil\ARM\Inc\LinkSafe --predefine="
+__EVAL SETA 1" --list=..\Out\Lst\start.lst ..\src\start.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 2 in file ..\src\start.s
+   Uses
+      None
+Comment: RESET unused
+1 symbol
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 3 in file ..\src\start.s
+   Uses
+      None
+Comment: .text unused
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 5 in file ..\src\start.s
+   Uses
+      At line 6 in file ..\src\start.s
+Comment: Reset_Handler used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+__main 00000000
+
+Symbol: __main
+   Definitions
+      At line 7 in file ..\src\start.s
+   Uses
+      At line 9 in file ..\src\start.s
+Comment: __main used once
+1 symbol
+337 symbols in table

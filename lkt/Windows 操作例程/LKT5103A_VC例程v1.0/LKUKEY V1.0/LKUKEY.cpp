@@ -1,0 +1,55 @@
+// LKUKEY.cpp : Defines the class behaviors for the application.
+//
+
+#include "stdafx.h"
+#include "LKUKEY.h"
+#include "LKUKEYDlg.h"
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+// CLKUKEYApp
+
+BEGIN_MESSAGE_MAP(CLKUKEYApp, CWinApp)
+	//{{AFX_MSG_MAP(CLKUKEYApp)
+	//}}AFX_MSG
+	ON_COMMAND(ID_HELP, CWinApp::OnHelp)
+END_MESSAGE_MAP()
+
+/////////////////////////////////////////////////////////////////////////////
+// CLKUKEYApp construction
+
+CLKUKEYApp::CLKUKEYApp()
+{
+}
+
+/////////////////////////////////////////////////////////////////////////////
+// The one and only CLKUKEYApp object
+
+CLKUKEYApp theApp;
+
+/////////////////////////////////////////////////////////////////////////////
+// CLKUKEYApp initialization
+
+BOOL CLKUKEYApp::InitInstance()
+{
+	// Standard initialization
+
+	CLKUKEYDlg dlg;
+	m_pMainWnd = &dlg;
+	int nResponse = dlg.DoModal();
+	if (nResponse == IDOK)
+	{
+	}
+	else if (nResponse == IDCANCEL)
+	{
+	}
+
+	// Since the dialog has been closed, return FALSE so that we exit the
+	//  application, rather than start the application's message pump.
+	return FALSE;
+}
