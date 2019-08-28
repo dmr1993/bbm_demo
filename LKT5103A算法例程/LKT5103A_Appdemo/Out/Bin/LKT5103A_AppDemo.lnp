@@ -1,0 +1,5 @@
+--cpu Cortex-M0 "..\out\bin\app_main.o" "..\out\bin\start.o" "..\out\bin\app_fun.o" D:\Keil\bbm_demo\LKT5103AËã·¨Àý³Ì\LKT5103A_Appdemo\Lib\LKAPI_5103A.lib 
+--strict --scatter ".\ARM_APP.sc" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list "..\Out\Lst\LKT5103A_AppDemo.map" -o ..\Out\Bin\LKT5103A_AppDemo.axf
