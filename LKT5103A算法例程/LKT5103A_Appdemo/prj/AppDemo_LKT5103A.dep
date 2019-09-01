@@ -1,12 +1,12 @@
 Dependencies for Project 'AppDemo', Target 'LKT5103A': (DO NOT MODIFY !)
-F (..\src\App_Main.c)(0x5D65E8AE)(-c --cpu Cortex-M0 -D__EVAL --li -g -O3 --apcs=interwork -I..\head -I d:\Keil\ARM\RV31\INC -I d:\Keil\ARM\CMSIS\Include -I d:\Keil\ARM\Inc\LinkSafe -o "..\Out\Bin\app_main.o" --list_dir "..\\Out\\Lst\\" --list --omf_browse "..\Out\Bin\app_main.crf" --depend "..\Out\Bin\app_main.d")
+F (..\src\App_Main.c)(0x5D67FA30)(-c --cpu Cortex-M0 -D__EVAL --li -g -O3 --apcs=interwork -I..\head -I d:\Keil\ARM\RV31\INC -I d:\Keil\ARM\CMSIS\Include -I d:\Keil\ARM\Inc\LinkSafe -o "..\Out\Bin\app_main.o" --list_dir "..\\Out\\Lst\\" --list --omf_browse "..\Out\Bin\app_main.crf" --depend "..\Out\Bin\app_main.d")
 I (..\head\DEF_Type.h)(0x5D64CCE5)
 I (..\head\lk_api.h)(0x5D64CCE5)
 I (d:\Keil\ARM\ARMCC\bin\..\include\math.h)(0x50F96150)
 I (d:\Keil\ARM\ARMCC\bin\..\include\string.h)(0x50F96150)
 I (d:\Keil\ARM\ARMCC\bin\..\include\stdio.h)(0x50F96150)
 F (..\src\start.s)(0x5D64CCE6)(--cpu Cortex-M0 --li --pd "__EVAL SETA 1" -g --16 --apcs=interwork -I..\..\SRC\HAL\ARM_FLASH\REG -I d:\Keil\ARM\RV31\INC -I d:\Keil\ARM\CMSIS\Include -I d:\Keil\ARM\Inc\LinkSafe --list "..\Out\Lst\start.lst" --xref -o "..\Out\Bin\start.o" --depend "..\Out\Bin\start.d")
-F (..\src\App_fun.c)(0x5D65F073)(-c --cpu Cortex-M0 -D__EVAL --li -g -O3 --apcs=interwork -I..\head -I d:\Keil\ARM\RV31\INC -I d:\Keil\ARM\CMSIS\Include -I d:\Keil\ARM\Inc\LinkSafe -o "..\Out\Bin\app_fun.o" --list_dir "..\\Out\\Lst\\" --list --omf_browse "..\Out\Bin\app_fun.crf" --depend "..\Out\Bin\app_fun.d")
+F (..\src\App_fun.c)(0x5D6B6360)(-c --cpu Cortex-M0 -D__EVAL --li -g -O3 --apcs=interwork -I..\head -I d:\Keil\ARM\RV31\INC -I d:\Keil\ARM\CMSIS\Include -I d:\Keil\ARM\Inc\LinkSafe -o "..\Out\Bin\app_fun.o" --list_dir "..\\Out\\Lst\\" --list --omf_browse "..\Out\Bin\app_fun.crf" --depend "..\Out\Bin\app_fun.d")
 I (..\head\DEF_Type.h)(0x5D64CCE5)
 I (..\head\lk_api.h)(0x5D64CCE5)
 I (d:\Keil\ARM\ARMCC\bin\..\include\string.h)(0x50F96150)

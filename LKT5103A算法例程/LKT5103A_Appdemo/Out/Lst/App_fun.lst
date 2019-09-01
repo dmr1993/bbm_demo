@@ -2408,7 +2408,7 @@ N		float d=4.5;
 N   	float fdata[10];              //创建浮点数数组
 N   	unsigned char *ptr;           //
 N		unsigned char *ptr1;  
-N		
+N	//	double d0 = 1.2;
 N   	
 N	  for(j=0;j<10;j++)
 N	  {
@@ -2432,9 +2432,58 @@ N
 N		return 40;   //10个浮点数是40个字节
 N}
 N
-N
-N
-N
+N/**
+N	8008 0000 33 08 FFC0 0000803F 0000803F 0000803F 0000803F 0000803F 0000803F 0000803F 0000803F 0000803F 0000803F 0000803F 0000803F 0000803F
+N3F800000
+N*/
+Nint Algorithm(u8 *pIn,u8 *pOut) //5103A支持单精度浮点数，且为小端模式
+N{
+N	int keys[12];
+N	int i = 0;
+N	int j = 0;
+N	int l = 0;
+N	// int h = 0;
+N	int start = 0;
+N	int indx = 0;
+N	u8 k = 1;
+N	float params[10];
+N	float *point;
+N	u8 *uP;
+N	u8 p[4];
+N	
+N	for(; i<2; i++){
+N		start = 8 *i;
+N		for(j =0; j<8; j++){
+N			if(i*8+j+l>12){
+N				break;
+N			}
+N			indx = start + j;
+N			keys[indx] = (pIn[i] >> (8 - (j+1)))&k;
+N		}
+N	}
+N	for(i = 0; i< 48/4; i++){
+N		if(keys[i] != 1){
+N			continue;
+N		}
+N		for(j = 0; j<4; j++){
+N			p[j] = pIn[i*4+j+2];
+N		}
+N		point = (float *)p;
+N		
+N		params[l] = *point;
+N		l++;
+N	}
+N	for(i = 0; i<10; i++){
+N		params[i]++;
+N		uP = (u8 *)&params[i];
+N		for(j = 0; j<4; j++){
+N			pOut[i*4 +j] = uP[j];
+N		}
+N	}
+N	
+N	
+N	return 40;
+N}
 N
 N
 N

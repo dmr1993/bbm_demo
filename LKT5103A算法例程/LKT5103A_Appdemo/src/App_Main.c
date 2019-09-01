@@ -17,6 +17,7 @@ extern int Read_Important_Data(u8 *pIn,u8 *pOut);    					// Ê¹ÓÃ½×¶ÎÖØÒª²ÎÊý¶ÁÈ
 
 extern int Algorithm_Transplantation(u8 *pIn,u8 *pOut); 			//Ëã·¨ÒÆÖ²º¯Êý
 extern int My_Algorithm(u8 *pIn,u8 *pOut);
+extern int Algorithm(u8 *pIn,u8 *pOut);
 
 
 /*************************************** APP_INIT È«¾Ö±äÁ¿³õÊ¼»¯º¯Êý********************************************/
@@ -126,6 +127,10 @@ u32 APP_Command(u8 LenOfIn,u8 *pInBuf,u8 * LenOfOut,u8 *pOutBuf)
 			 * LenOfOut = res;
 			 break;
 			
+			case 0x08:
+				res=Algorithm(pInBuf+1,pOutBuf); 
+			 * LenOfOut = res;
+			 break;
 			
 			
 			default:

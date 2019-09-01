@@ -382,7 +382,7 @@ int My_Algorithm(u8 *pIn,u8 *pOut) //5103A支持单精度浮点数，且为小端模式
    	float fdata[10];              //创建浮点数数组
    	unsigned char *ptr;           //
 		unsigned char *ptr1;  
-		
+	//	double d0 = 1.2;
    	
 	  for(j=0;j<10;j++)
 	  {
@@ -406,9 +406,58 @@ int My_Algorithm(u8 *pIn,u8 *pOut) //5103A支持单精度浮点数，且为小端模式
 		return 40;   //10个浮点数是40个字节
 }
 
-
-
-
+/**
+	8008 0000 33 08 FFC0 0000803F 0000803F 0000803F 0000803F 0000803F 0000803F 0000803F 0000803F 0000803F 0000803F 0000803F 0000803F 0000803F
+3F800000
+*/
+int Algorithm(u8 *pIn,u8 *pOut) //5103A支持单精度浮点数，且为小端模式
+{
+	int keys[12];
+	int i = 0;
+	int j = 0;
+	int l = 0;
+	// int h = 0;
+	int start = 0;
+	int indx = 0;
+	u8 k = 1;
+	float params[10];
+	float *point;
+	u8 *uP;
+	u8 p[4];
+	
+	for(; i<2; i++){
+		start = 8 *i;
+		for(j =0; j<8; j++){
+			if(i*8+j+l>12){
+				break;
+			}
+			indx = start + j;
+			keys[indx] = (pIn[i] >> (8 - (j+1)))&k;
+		}
+	}
+	for(i = 0; i< 48/4; i++){
+		if(keys[i] != 1){
+			continue;
+		}
+		for(j = 0; j<4; j++){
+			p[j] = pIn[i*4+j+2];
+		}
+		point = (float *)p;
+		
+		params[l] = *point;
+		l++;
+	}
+	for(i = 0; i<10; i++){
+		params[i]++;
+		uP = (u8 *)&params[i];
+		for(j = 0; j<4; j++){
+			pOut[i*4 +j] = uP[j];
+		}
+	}
+	
+	
+	return 40;
+}
 
 
 

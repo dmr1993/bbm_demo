@@ -14,7 +14,7 @@
 ### ADS-LD Output File: '..\Out\Bin\LKT5103A_AppDemo.axf'
 ### ADS-LD Command File: '..\Out\Bin\LKT5103A_AppDemo.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile '..\Out\Bin\LKT5103A_AppDemo.lnp', Handle=0x000001BC
+### Creating CmdFile '..\Out\Bin\LKT5103A_AppDemo.lnp', Handle=0x00001E40
 ### Writing '.lnp' file
 ### ADS-LD Command file '..\Out\Bin\LKT5103A_AppDemo.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.

@@ -3062,6 +3062,7 @@ Nextern int Read_Important_Data(u8 *pIn,u8 *pOut);    					// 使用阶段重要参数读
 N
 Nextern int Algorithm_Transplantation(u8 *pIn,u8 *pOut); 			//算法移植函数
 Nextern int My_Algorithm(u8 *pIn,u8 *pOut);
+Nextern int Algorithm(u8 *pIn,u8 *pOut);
 N
 N
 N/*************************************** APP_INIT 全局变量初始化函数********************************************/
@@ -3171,6 +3172,10 @@ N			 res=My_Algorithm(pInBuf+1,pOutBuf);
 N			 * LenOfOut = res;
 N			 break;
 N			
+N			case 0x08:
+N				res=Algorithm(pInBuf+1,pOutBuf); 
+N			 * LenOfOut = res;
+N			 break;
 N			
 N			
 N			default:
